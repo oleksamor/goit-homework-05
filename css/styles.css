@@ -13,6 +13,7 @@
   --color-customer: rgb(175, 177, 184);
   --primary-font: "Roboto";
   --secondary-font: "Raleway";
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -64,7 +65,8 @@ body {
 .header-line {
   border-bottom: 1px solid var(--accent-color);
   background: var(--white-background);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .logotype {
@@ -112,12 +114,25 @@ body {
 
 .menu-link {
   display: block;
+  position: relative;
   padding-top: 24px;
   padding-bottom: 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: var(--pressed-state-color);
+  border-radius: 2px;
+  bottom: 0;
+  transition: opacity 250ms var(--timing-function);
 }
 
 .menu-link:hover,
@@ -138,8 +153,10 @@ body {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -205,7 +222,7 @@ body {
 }
 
 .feature-item {
-  width: calc((100% - 3*24px) / 4);
+  width: calc((100% - 3 * 24px) / 4);
 }
 
 .feature-icon {
@@ -271,7 +288,6 @@ body {
 
 .team-item {
   padding: 32px 0;
-
 }
 
 /**
@@ -290,7 +306,6 @@ body {
   width: 40px;
   height: 40px;
 }
-
 
 .socmedia-icon {
   fill: var(--modal-overlay-color);
@@ -344,7 +359,7 @@ body {
 }
 
 .customers-item {
-  width: calc((100% - 5*24px) / 6);
+  width: calc((100% - 5 * 24px) / 6);
 }
 
 .customers-link {
@@ -356,8 +371,6 @@ body {
   border: 1px solid var(--subtle-text-color);
   border-radius: 4px;
   color: #afb1b8;
-  ;
-
 }
 
 .svg-link {
@@ -438,7 +451,8 @@ body {
   background-color: var(--pressed-state-color);
   color: #ffffff;
   border: 1px solid transparent;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .card-set {
@@ -465,7 +479,8 @@ body {
 
 .card-link:hover,
 .card-link:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 /**
