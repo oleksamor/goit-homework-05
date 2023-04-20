@@ -153,10 +153,8 @@ body {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)),
     url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -470,6 +468,28 @@ body {
 .card-link {
   display: block;
 }
+
+.thumba-box {
+  position: relative;
+}
+
+.thumba-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 40px 32px;
+  height: 100%;
+  color: var(--modal-overlay-color);
+  background-color: var(--primary-brand-color);
+}
+/* 
+.label-text {
+  width: 296px;
+  height: 96px;
+  left: 32px;
+  top: 40px;
+} */
+
 
 .card-content {
   padding: 32px 16px;
