@@ -432,6 +432,8 @@ body {
   padding: 120px 0;
 }
 
+.thumba-item {}
+
 .thumba-list {
   display: flex;
   justify-content: center;
@@ -451,6 +453,7 @@ body {
   letter-spacing: 0.04em;
   color: var(--primary-brand-color);
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), border 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 
 .thumba-button:hover,
