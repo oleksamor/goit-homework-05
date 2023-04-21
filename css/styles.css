@@ -121,6 +121,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: color 250ms var(--timing-function);
 }
 
 .current::after {
@@ -138,7 +139,6 @@ body {
 .menu-link:hover,
 .menu-link:focus {
   color: var(--pressed-state-color);
-  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -186,12 +186,12 @@ body {
   line-height: 1.5;
   border: none;
   cursor: pointer;
+  transition: background-color 250ms var(--timing-function);
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--pressed-state-color);
-  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -319,18 +319,21 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--primary-brand-color);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .socmedia-link:hover,
 .socmedia-link:focus {
   background-color: var(--pressed-state-color);
-  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socmedia-bgr {
+  transition: background-color 250ms var(--timing-function);
 }
 
 .socmedia-bgr:hover,
 .socmedia-bgr:focus {
-  background-color: #31d0aa;
-  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--success-color);
 }
 
 /**
@@ -373,12 +376,14 @@ body {
   border: 1px solid var(--subtle-text-color);
   border-radius: 4px;
   color: #afb1b8;
+  transition: color 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 
 .svg-link {
   /* width: 104px;
   height: 56px; */
   fill: currentColor;
+  transition: fill 250ms var(--timing-function);
 }
 
 /* .customers-icon {} */
@@ -387,13 +392,11 @@ body {
 .customers-link:focus {
   border-color: var(--pressed-state-color);
   color: #404bbf;
-  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-link:hover,
 .svg-link:focus {
   fill: var(--pressed-state-color);
-  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ====== thumba ========= */
@@ -457,7 +460,6 @@ body {
   border: 1px solid transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-set {
@@ -474,6 +476,7 @@ body {
 
 .card-link {
   display: block;
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .thumba-box {
@@ -489,7 +492,7 @@ body {
   height: 100%;
   background-color: var(--primary-brand-color);
   transform: translateY(100%);
-  transition: var(--timing-function);
+  transition: 250ms var(--timing-function);
 }
 
 .overlay-label {
@@ -505,14 +508,12 @@ body {
 
 .card-link:hover .overlay {
   transform: translateY(0);
-  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-link:hover,
 .card-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -577,13 +578,15 @@ body {
   left: 0px;
   top: 0px;
   background-color: rgba(46, 47, 66, 0.4);
-  
+
 }
-.is-hidden{
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .modal {
   position: fixed;
   width: 408px;
