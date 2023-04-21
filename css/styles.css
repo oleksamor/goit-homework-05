@@ -13,7 +13,7 @@
   --color-customer: rgb(175, 177, 184);
   --primary-font: "Roboto";
   --secondary-font: "Raleway";
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -138,6 +138,7 @@ body {
 .menu-link:hover,
 .menu-link:focus {
   color: var(--pressed-state-color);
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -190,6 +191,7 @@ body {
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--pressed-state-color);
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -322,11 +324,13 @@ body {
 .socmedia-link:hover,
 .socmedia-link:focus {
   background-color: var(--pressed-state-color);
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socmedia-bgr:hover,
 .socmedia-bgr:focus {
   background-color: #31d0aa;
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -383,11 +387,13 @@ body {
 .customers-link:focus {
   border-color: var(--pressed-state-color);
   color: #404bbf;
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-link:hover,
 .svg-link:focus {
   fill: var(--pressed-state-color);
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ====== thumba ========= */
@@ -451,6 +457,7 @@ body {
   border: 1px solid transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+    --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-set {
@@ -498,12 +505,14 @@ body {
 
 .card-link:hover .overlay {
   transform: translateY(0);
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-link:hover,
 .card-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -567,9 +576,14 @@ body {
   height: 100%;
   left: 0px;
   top: 0px;
-  background: rgba(46, 47, 66, 0.4);
+  background-color: rgba(46, 47, 66, 0.4);
+  
 }
-
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 .modal {
   position: fixed;
   width: 408px;
@@ -577,18 +591,16 @@ body {
   left: 516px;
   top: 88px;
   padding: 24px;
-  background: var(--modal-background);
+  background-color: var(--modal-background);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: translate(-50% -50%);
 }
 
 .modal-btn {
-  position: absolute;
-
   display: block;
-  /* margin-left: auto; */
+  margin-left: auto;
   cursor: pointer;
+  margin-bottom: 24px;
 }
 
 .modal-icon {}
