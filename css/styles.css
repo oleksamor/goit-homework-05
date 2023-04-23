@@ -618,12 +618,15 @@ body {
   height: 24px;
   border-radius: 50%;
   background: var(--accent-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.modal-btn:hover,.modal-icon:hover {background-color: var(--pressed-state-color);
-  fill: var(--white-background)
 
+.modal-btn:hover,
+.modal-icon:hover {
+  background-color: var(--pressed-state-color);
+  fill: var(--white-background)
 }
+
 .modal-icon {
   width: 8px;
   height: 8px;
