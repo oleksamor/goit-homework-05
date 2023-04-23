@@ -590,16 +590,23 @@ body {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0);
+}
+
 .modal {
   position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scaleY(1);
   width: 408px;
   min-height: 576px;
-  left: 516px;
-  top: 88px;
   padding: 24px;
+
   background-color: var(--modal-background);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 250ms var(--timing-function);
 }
 
 .modal-btn {
@@ -607,6 +614,19 @@ body {
   margin-left: auto;
   cursor: pointer;
   margin-bottom: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.modal-btn:hover,.modal-icon:hover {background-color: var(--pressed-state-color);
+  fill: var(--white-background)
 
-.modal-icon {}
+}
+.modal-icon {
+  width: 8px;
+  height: 8px;
+  transition: fill 250ms var(--timing-function);
+
+}
