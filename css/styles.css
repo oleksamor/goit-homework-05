@@ -431,7 +431,7 @@ body {
   padding: 120px 0;
 }
 
-.thumba-item {}
+/* .thumba-item {} */
 
 .thumba-list {
   display: flex;
@@ -586,7 +586,10 @@ body {
   left: 0px;
   top: 0px;
   background-color: rgba(46, 47, 66, 0.4);
-
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
 }
 
 .is-hidden {
@@ -595,8 +598,9 @@ body {
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop.is-hidden.modal {
   transform: translate(-50%, -50%) scaleY(0);
+  /* transition: deley 400ms; */
 }
 
 .modal {
@@ -607,11 +611,11 @@ body {
   width: 408px;
   min-height: 576px;
   padding: 24px;
-
   background-color: var(--modal-background);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform 250ms var(--timing-function);
+  opacity: 1;
+  transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
 }
 
 .modal-btn {
@@ -627,17 +631,19 @@ body {
   border-radius: 50%;
   background: var(--accent-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color var(--timing-function), fill 250ms var(--timing-function);
+
 }
 
-.modal-btn:hover,
-.modal-icon:hover {
+.modal-btn:hover {
   background-color: var(--pressed-state-color);
-  fill: var(--white-background)
+  fill: var(--white-background);
+  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
+
 }
+
 
 .modal-icon {
   width: 8px;
   height: 8px;
-  transition: fill 250ms var(--timing-function);
-
 }
