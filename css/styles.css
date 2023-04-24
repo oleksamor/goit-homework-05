@@ -124,6 +124,10 @@ body {
   transition: color 250ms var(--timing-function);
 }
 
+.menu-color {
+  color: var(--pressed-state-color)
+}
+
 .current::after {
   content: "";
   display: block;
@@ -629,21 +633,21 @@ body {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: var(--accent-color);
+  color: var(--dark-color);
+  background-color: var(--accent-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color var(--timing-function), fill 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 
 }
 
 .modal-btn:hover {
   background-color: var(--pressed-state-color);
-  fill: var(--white-background);
-  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
-
+  color: var(--modal-overlay-color);
 }
 
 
 .modal-icon {
   width: 8px;
   height: 8px;
+  color: currentColor;
 }
