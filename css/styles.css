@@ -649,5 +649,5 @@ body {
 .modal-icon {
   width: 8px;
   height: 8px;
-  color: currentColor;
+  fill: currentColor;
 }
