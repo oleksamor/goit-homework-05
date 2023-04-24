@@ -508,7 +508,8 @@ body {
   border-top: none;
 }
 
-.card-link:hover .overlay {
+.card-link:hover .overlay,
+.card-link:focus .overlay {
   transform: translateY(0);
 }
 
